@@ -1,12 +1,12 @@
 $primaryColor: #c4b5fd !default;
-$primaryLightColor: rgba(196, 181, 253, .2) !default;
+$primaryLightColor: rgba(196, 181, 253, 0.2) !default;
 $primaryDarkColor: #a78bfa !default;
-$primaryDarkerColor: #8b5cf6!default;
+$primaryDarkerColor: #8b5cf6 !default;
 $primaryTextColor: #030712 !default;
 
-$highlightBg:rgba(196, 181, 253, .16) !default;
-$highlightTextColor: rgba(255,255,255,.87) !default;
-$highlightFocusBg: rgba($primaryColor, .24) !default;
+$highlightBg: rgba(196, 181, 253, 0.16) !default;
+$highlightTextColor: rgba(255, 255, 255, 0.87) !default;
+$highlightFocusBg: rgba($primaryColor, 0.24) !default;
 
 @import '../_variables';
 @import './_fonts';
