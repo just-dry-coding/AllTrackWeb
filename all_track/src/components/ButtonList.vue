@@ -12,10 +12,10 @@ import Button from 'primevue/button'
 
 const props = defineProps({
   items: {
-    type: Array  as () => string[],
+    type: Array as () => string[],
     required: true,
-    default: () => ([]),
-  },
+    default: () => []
+  }
 })
 
 let items = props.items
