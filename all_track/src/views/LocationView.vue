@@ -1,7 +1,7 @@
 <template>
   <main>
     <h1 id="title">Locations</h1>
-    <ButtonList :items="locations" />
+    <ButtonList :items="locations" :on-click="handleLocationClicked" />
     <Button class="pluss_button" icon="pi pi-plus" text raised @click="onPlussButtonClicked" />
     <ButtonBar class="buttonbar_bottom" @mode-changed="handleModeChange" />
     <DialogBox :display="display" :on-click="addLocation" @on-close="hideDialogBox" />
@@ -16,6 +16,7 @@ import ButtonBar from '@/components/ButtonBar.vue'
 import DialogBox from '@/components/DialogBox.vue'
 import { ApplicationMode } from '@/enums/ApplicationMode'
 
+// fetch this info from db
 let locations = ref(['Shibuya', 'Home', 'Takadanobaba'])
 let display = ref(false)
 
@@ -36,7 +37,6 @@ const addLocation = (newLocation: string) => {
 }
 
 const hideDialogBox = () => {
-  console.log('hideDialogBox')
   display.value = false
 }
 </script>

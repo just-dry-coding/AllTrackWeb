@@ -1,6 +1,6 @@
 <template>
   <div class="button-container" v-for="item of items" :key="item">
-    <Button class="button" :label="item" rounded />
+    <Button class="button" :label="item" />
   </div>
 </template>
 
@@ -15,6 +15,10 @@ const props = defineProps({
     type: Array as () => string[],
     required: true,
     default: () => []
+  },
+  onClick: {
+    type: Function,
+    required: true
   }
 })
 
@@ -31,6 +35,7 @@ let items = props.items
 .button {
   flex: 1;
   margin: 10px;
-  width: 200px;
+  width: 220px;
+  border-radius: 15px;
 }
 </style>
