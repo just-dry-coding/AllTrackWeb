@@ -1,7 +1,6 @@
 <template>
   <main>
     <h1 id="title">Locations</h1>
-    <ButtonList />
     <Button class="pluss_button" icon="pi pi-plus" text raised />
     <ButtonBar class="buttonbar_bottom" />
   </main>

@@ -15,6 +15,9 @@ import Button from 'primevue/button'
 import ButtonBar from '@/components/ButtonBar.vue'
 import DialogBox from '@/components/DialogBox.vue'
 import { ApplicationMode } from '@/enums/ApplicationMode'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 // fetch this info from db
 let locations = ref(['Shibuya', 'Home', 'Takadanobaba'])
@@ -41,7 +44,7 @@ const hideDialogBox = () => {
 }
 
 const handleLocationClicked = (location: string) => {
-  console.log(location)
+  router.push({ name: 'enter', params: { locationName: location } })
 }
 </script>
 

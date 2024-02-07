@@ -10,7 +10,7 @@ const router = createRouter({
       component: LocationView
     },
     {
-      path: '/enter/:location-name',
+      path: '/enter/:locationName',
       name: 'enter',
       component: () => import('../views/EnterEntryView.vue')
     }
