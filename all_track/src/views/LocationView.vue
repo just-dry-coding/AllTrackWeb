@@ -2,7 +2,7 @@
   <main>
     <h1 id="title">Locations</h1>
     <ButtonList :items="locations" :on-click="handleLocationClicked" />
-    <Button class="pluss_button" icon="pi pi-plus" text raised @click="onPlussButtonClicked" />
+    <Button id="pluss_button" icon="pi pi-plus" text raised @click="onPlussButtonClicked" />
     <ButtonBar class="buttonbar_bottom" @mode-changed="handleModeChange" />
     <DialogBox :display="display" :on-click="addLocation" @on-close="hideDialogBox" />
   </main>
@@ -54,7 +54,7 @@ const handleLocationClicked = (location: string) => {
   margin-top: 0;
 }
 
-.pluss_button {
+#pluss_button {
   position: fixed;
   display: block;
   bottom: 15%;
