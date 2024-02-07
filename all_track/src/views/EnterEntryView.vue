@@ -1,12 +1,16 @@
 <template>
   <main>
-    <h1 id="title">Locations</h1>
+    <h1 id="title">
+      {{ $route.params.locationName }}
+    </h1>
     <Button class="pluss_button" icon="pi pi-plus" text raised />
     <ButtonBar class="buttonbar_bottom" />
   </main>
 </template>
 
 <script setup lang="ts">
+// need to fetch the metrics from the db
+// need
 import ButtonList from '@/components/ButtonList.vue'
 import Button from 'primevue/button'
 import ButtonBar from '@/components/ButtonBar.vue'
