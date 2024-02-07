@@ -4,7 +4,7 @@
       {{ $route.params.locationName }}
     </h1>
     <Button class="pluss_button" icon="pi pi-plus" text raised />
-    <ButtonBar class="buttonbar_bottom" />
+    <Button class="save_bottom" label="Save" />
   </main>
 </template>
 
@@ -13,7 +13,6 @@
 // need
 import ButtonList from '@/components/ButtonList.vue'
 import Button from 'primevue/button'
-import ButtonBar from '@/components/ButtonBar.vue'
 </script>
 
 <style scoped>
@@ -31,10 +30,13 @@ import ButtonBar from '@/components/ButtonBar.vue'
   height: 60px;
 }
 
-.buttonbar_bottom {
+.save_bottom {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
+  margin: 10px;
+  background-color: #2d2d2d;
+  height: 55px;
 }
 </style>
