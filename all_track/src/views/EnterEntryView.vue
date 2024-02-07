@@ -6,6 +6,7 @@
     <ButtonList :items="metrics" :on-click="openMetricEntryDialog" />
     <Button id="pluss_button" icon="pi pi-plus" text raised />
     <Button id="save_bottom" label="Save" />
+    <DialogBox :display="display" :on-click="addMetric" @on-close="hideDialogBox" />
   </main>
 </template>
 
@@ -16,11 +17,22 @@ import { ref } from 'vue'
 
 import ButtonList from '@/components/ButtonList.vue'
 import Button from 'primevue/button'
+import DialogBox from '@/components/DialogBox.vue'
 
 let metrics = ref(['NiDan', 'OneArmer', '10+8mm'])
+let display = ref(false)
 
 const openMetricEntryDialog = (metric: string) => {
+  display.value = true
   console.log(metric)
+}
+
+const hideDialogBox = () => {
+  display.value = false
+}
+
+const addMetric = (newMetric: string) => {
+  console.log(newMetric)
 }
 </script>
 
