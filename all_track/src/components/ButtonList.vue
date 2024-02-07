@@ -1,6 +1,6 @@
 <template>
   <div class="button-container" v-for="item of items" :key="item">
-    <Button class="button" :label="item" />
+    <Button class="button" :label="item" @click="onClick(item)" />
   </div>
 </template>
 

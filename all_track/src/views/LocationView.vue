@@ -39,6 +39,10 @@ const addLocation = (newLocation: string) => {
 const hideDialogBox = () => {
   display.value = false
 }
+
+const handleLocationClicked = (location: string) => {
+  console.log(location)
+}
 </script>
 
 <style scoped>
